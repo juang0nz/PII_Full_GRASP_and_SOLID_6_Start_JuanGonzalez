@@ -17,7 +17,7 @@ namespace Full_GRASP_And_SOLID
 
         public Product FinalProduct { get; set; }
 
-        // Parte 2
+        // El atributo Cooked seteado en false
         public bool Cooked { get; private set; } = false;
 
         // Agregado por Creator
@@ -67,7 +67,7 @@ namespace Full_GRASP_And_SOLID
             return result;
         }
 
-        // Parte 1
+        // Se agrega GetCookTime
         private int GetCookTime()
         {
             int time = 0;
@@ -79,7 +79,7 @@ namespace Full_GRASP_And_SOLID
             return time;
         }
 
-        // Parte 3
+        // Se agrega Cook
         public void Cook()
         {
 
@@ -90,7 +90,7 @@ namespace Full_GRASP_And_SOLID
             timer.Register(this.GetCookTime(), client);
 
         }
-
+        // no estamos seguro de que sea de esta manera      
         private class Time : TimerClient
         {
             public Recipe Recipe;
